@@ -16,6 +16,8 @@ create warehouse if not exists load_wh
      scaling_policy = 'standard'
      initially_suspended = true;
 
+GRANT OPERATE ON WAREHOUSE load_wh TO ROLE TRANSFORM;
+
 -- all the ETL workload will be manage by it.
 create warehouse if not exists transform_wh
      comment = 'this is ETL warehosue for all loading activity' 

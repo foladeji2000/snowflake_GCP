@@ -75,6 +75,14 @@ WHERE pipe_name = 'GCS_TO_SNOWFLAKE_PIPE';
 
 
 
+##we should have specified a file format
+ -- create file format to process the JSON file
+  create file format if not exists json_file_format 
+      type = 'JSON'
+      compression = 'AUTO' 
+      comment = 'this is json file format object';
+
+
 
 
 
